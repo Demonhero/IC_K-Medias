@@ -1,8 +1,8 @@
 ﻿  Main.cpp
-c:\users\josemaria\documents\github\ic_k-medias\k-medias\k-medias\calculoskmedias.h(29): warning C4018: '<': no coinciden signed/unsigned
-c:\users\josemaria\documents\github\ic_k-medias\k-medias\k-medias\calculoskmedias.h(31): warning C4018: '<': no coinciden signed/unsigned
-c:\users\josemaria\documents\github\ic_k-medias\k-medias\k-medias\calculoskmedias.h(39): warning C4018: '<': no coinciden signed/unsigned
-c:\users\josemaria\documents\github\ic_k-medias\k-medias\k-medias\calculoskmedias.h(52): warning C4018: '<': no coinciden signed/unsigned
+c:\users\josemaria\documents\github\ic_k-medias\k-medias\k-medias\calculoskmedias.h(28): warning C4018: '<': no coinciden signed/unsigned
+c:\users\josemaria\documents\github\ic_k-medias\k-medias\k-medias\calculoskmedias.h(30): warning C4018: '<': no coinciden signed/unsigned
+c:\users\josemaria\documents\github\ic_k-medias\k-medias\k-medias\calculoskmedias.h(38): warning C4018: '<': no coinciden signed/unsigned
+c:\users\josemaria\documents\github\ic_k-medias\k-medias\k-medias\calculoskmedias.h(51): warning C4018: '<': no coinciden signed/unsigned
 c:\users\josemaria\documents\github\ic_k-medias\k-medias\k-medias\k-medias.h(19): warning C4305: 'inicializando': truncamiento de 'double' a 'const float'
 c:\users\josemaria\documents\github\ic_k-medias\k-medias\k-medias\k-medias.h(57): warning C4018: '<': no coinciden signed/unsigned
 c:\users\josemaria\documents\github\ic_k-medias\k-medias\k-medias\k-medias.h(79): warning C4018: '<': no coinciden signed/unsigned

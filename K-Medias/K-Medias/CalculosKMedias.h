@@ -22,9 +22,8 @@ public:
 
 	std::vector<float> calcularCentro(int c, std::vector<float> v, std::vector<std::vector<float>> x, std::vector<std::vector<float>> u) {
 		
-		std::vector<float> centroNuevo;
+		std::vector<float> centroNuevo = { 0,0,0,0 };
 		float a = 0, den = 0, aux = 0;
-		centroNuevo=x[0];
 
 		for (int i = 0; i < x.size(); i++) {
 			den = den + (float)pow(u[c][i], B);
@@ -36,7 +35,7 @@ public:
 
 		}
 
-		for (int i = 0; i < centroNuevo.size(); i++) {
+		for (int i = 0; i < centroNuevo.size() && den!=0; i++) {
 			aux = centroNuevo[i];
 			aux = aux / den;
 			centroNuevo[i] = aux;
@@ -50,7 +49,8 @@ public:
 		float r = 0;
 		
 		for (int i = 0; i < a.size() && i<b.size(); i++) {
-			r = r + (float)pow((a[i] - b[i]), 2);
+			//r = r + (float)pow((a[i] - b[i]), 2);
+			r += (a[i] - b[i])*(a[i] - b[i]);
 		}
 
 		return r;

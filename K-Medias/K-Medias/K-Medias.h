@@ -117,7 +117,7 @@ public:
 		centrosAnteriores[1] = centros[1];
 
 		centros[0] = CalculosKMedias().calcularCentro(0, centrosAnteriores[0], muestras, U);
-		centros[1] = CalculosKMedias().calcularCentro(0, centrosAnteriores[1], muestras, U);
+		centros[1] = CalculosKMedias().calcularCentro(1, centrosAnteriores[1], muestras, U);
 
 	}
 
