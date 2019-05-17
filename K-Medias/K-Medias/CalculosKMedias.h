@@ -49,7 +49,7 @@ public:
 	float distanciaEuclideaAlCuadrado(std::vector<float>a, std::vector<float>b) {
 		float r = 0;
 		
-		for (int i = 0; i < a.size(); i++) {
+		for (int i = 0; i < a.size() && i<b.size(); i++) {
 			r = r + (float)pow((a[i] - b[i]), 2);
 		}
 

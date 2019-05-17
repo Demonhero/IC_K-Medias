@@ -4,14 +4,20 @@
 #include <iostream>
 #include <vector>
 #include <stdexcept>
+#include <fstream>
 #include <string>
 #include "CalculosKMedias.h"
+#include <iostream>
+#include <iomanip>
+#include <algorithm>
+
+using namespace std;
 
 class KMedias {
 
 private:
 	const float TOLERANCIA = 0.01;
-	std::vector<string> nombreClase;
+	std::vector<std::string> nombreClase;
 	std::vector<std::vector<float>> U;
 	std::vector<std::vector<float>> centros;
 	std::vector<std::vector<float>> centrosAnteriores;
@@ -45,19 +51,24 @@ public:
 	}
 
 	void inicializarU() {
-		for (int i = 0; muestras.size(); i++) {
-
+		vector<float> aux;
+		U.push_back(aux);
+		U.push_back(aux);
+		for (int i = 0; i<muestras.size(); i++) {
+			U[0].push_back(CalculosKMedias().calcularPertenencia(0, centros, muestras[i]));
+			U[1].push_back(CalculosKMedias().calcularPertenencia(1, centros, muestras[i]));
 		}
 	}
 
 	void leerFicherosMuestras() {
+		std::ifstream file;
 		try {
-			ifstream file;
-			file.open("Iris2Clases.txt");
+			file.open("ClasesIris2.txt");
 			float dato;
 			std::vector<float> aux;
-			string nombre;
+			std::string nombre;
 			while (!file.eof()) {
+				aux.clear();
 				for (int i = 0; i < 4; i++) {
 					file >> dato;
 					aux.push_back(dato);
@@ -65,7 +76,7 @@ public:
 				muestras.push_back(aux);
 				file >> nombre;
 				bool encontrado = false;
-				for (int i = 0; nombreClase.size() && !encontrado; i++) {
+				for (int i = 0; i<nombreClase.size() && !encontrado; i++) {
 					if (nombreClase[i].compare(nombre) == 0) {
 						encontrado = true;
 					}
@@ -117,8 +128,8 @@ public:
 		}
 	}
 
-	string test(string fichero) {
-		string resultado = "";
+	std::string test(std::string fichero) {
+		std::string resultado = "";
 		try {
 			ifstream file;
 			file.open(fichero);
